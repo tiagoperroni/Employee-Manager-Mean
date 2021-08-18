@@ -19,8 +19,7 @@ empController.getById = async (req, res) => {
     res.send(employee);
 };
 
-empController.updateEmployes = async (req, res) => {    
-    //precisamos receber o id e o empregado no copo
+empController.updateEmployes = async (req, res) => {      
     await Employee.findByIdAndUpdate(req.params.id, req.body)
     res.json({status: 'Empregado atualizado!'})
     
